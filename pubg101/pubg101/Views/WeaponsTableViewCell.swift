@@ -11,7 +11,9 @@ import SDWebImage
 class WeaponsTableViewCell: UITableViewCell {
     static let identifier = "WeaponsTableViewCell"
     
-    private let weaponImageContainer: UIView = {
+    var weapon: Weapon?
+    
+    public let weaponImageContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 5.0
         view.backgroundColor = .secondarySystemBackground
@@ -77,7 +79,6 @@ class WeaponsTableViewCell: UITableViewCell {
         descriptionContainer.addSubview(damagePerSecondlabel)
         descriptionContainer.addSubview(rangeLabel)
         
-        
     }
     
     required init?(coder: NSCoder) {
@@ -89,18 +90,18 @@ class WeaponsTableViewCell: UITableViewCell {
         
         weaponImageContainer.frame = CGRect(
             x: 10,
-            y: 10,
+            y: 5,
             width: (contentView.frame.size.width/3)-20,
-            height: contentView.frame.size.height-20)
+            height: contentView.frame.size.height-10)
 //        weaponImageContainer.backgroundColor = .systemBackground
         
         weaponImageView.frame = weaponImageContainer.bounds
         
         descriptionContainer.frame = CGRect(
             x: weaponImageContainer.right,
-            y: 10,
+            y: 5,
             width: contentView.width-weaponImageContainer.width-10,
-            height: contentView.height-20)
+            height: contentView.height-10)
 //        descriptionContainer.backgroundColor = .systemBlue
         
         nameLabel.frame = CGRect(
@@ -132,6 +133,12 @@ class WeaponsTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        weaponImageView.image = nil
+        nameLabel.text = nil
+        typeLabel.text = nil
+        damagePerSecondlabel.text = nil
+        rangeLabel.text = nil
+        
     }
     
     func configure(withViewModel model: WeaponsTableViewCellViewModel) {
@@ -143,7 +150,5 @@ class WeaponsTableViewCell: UITableViewCell {
         weaponImageView.sd_setImage(with: model.imageURL, completed: nil)
         
     }
-    
-    
     
 }

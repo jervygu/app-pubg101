@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Pubg101ViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(WeaponsTableViewCell.self, forCellReuseIdentifier: WeaponsTableViewCell.identifier)
-        tableView.backgroundColor = .systemBackground
 //        tableView.separatorInset = .zero
         return tableView
     }()
@@ -24,6 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         title = "Pubg 101"
         
+        view.backgroundColor = .systemBackground
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -34,7 +35,6 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         
         fetchWeapons()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,9 +68,11 @@ class ViewController: UIViewController {
         }
     }
 
+
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension Pubg101ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
     }
@@ -82,11 +84,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.configure(withViewModel: viewModels[indexPath.row])
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didtapImage(sender:)))
+
+        cell.weaponImageContainer.addGestureRecognizer(tap)
+        cell.weaponImageContainer.isUserInteractionEnabled = true
+        
         return cell
     }
     
+    @objc func didtapImage(sender : UITapGestureRecognizer) {
+        print("image tapped")
+        
+        let tapLocation = sender.location(in: self.tableView)
+        let indexPath : NSIndexPath = self.tableView.indexPathForRow(at: tapLocation) as! NSIndexPath
+        
+        let model = viewModels[indexPath.row]
+        
+        let vc = WeaponFullImageViewController()
+        vc.weaponImageURL = model.imageURL
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -102,6 +122,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         print(weapons.name)
         
         navigationController?.pushViewController(vc, animated: true)
+        
         
     }
     

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		04473DB3265F725600BE7D8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04473DB2265F725600BE7D8D /* AppDelegate.swift */; };
 		04473DB5265F725600BE7D8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04473DB4265F725600BE7D8D /* SceneDelegate.swift */; };
-		04473DB7265F725600BE7D8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04473DB6265F725600BE7D8D /* ViewController.swift */; };
+		04473DB7265F725600BE7D8D /* Pubg101ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04473DB6265F725600BE7D8D /* Pubg101ViewController.swift */; };
 		04473DBA265F725600BE7D8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04473DB8265F725600BE7D8D /* Main.storyboard */; };
 		04473DBC265F725700BE7D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04473DBB265F725700BE7D8D /* Assets.xcassets */; };
 		04473DBF265F725700BE7D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04473DBD265F725700BE7D8D /* LaunchScreen.storyboard */; };
@@ -19,6 +19,7 @@
 		04473DD3265F849300BE7D8D /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04473DD2265F849300BE7D8D /* APICaller.swift */; };
 		04B4B4EC265FA77800BE8F3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4B4EB265FA77800BE8F3B /* Extensions.swift */; };
 		04B4B4EF265FAF5700BE8F3B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4B4EE265FAF5700BE8F3B /* WebViewController.swift */; };
+		04D7261F2660BFC000E8CCCF /* WeaponFullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7261E2660BFC000E8CCCF /* WeaponFullImageViewController.swift */; };
 		217A59BFB58D728C93C3D30A /* Pods_pubg101.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15200FB2FDB11BAA7090D0B0 /* Pods_pubg101.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,7 @@
 		04473DAF265F725600BE7D8D /* pubg101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pubg101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04473DB2265F725600BE7D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04473DB4265F725600BE7D8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04473DB6265F725600BE7D8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04473DB6265F725600BE7D8D /* Pubg101ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pubg101ViewController.swift; sourceTree = "<group>"; };
 		04473DB9265F725600BE7D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04473DBB265F725700BE7D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04473DBE265F725700BE7D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		04473DD2265F849300BE7D8D /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		04B4B4EB265FA77800BE8F3B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04B4B4EE265FAF5700BE8F3B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		04D7261E2660BFC000E8CCCF /* WeaponFullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponFullImageViewController.swift; sourceTree = "<group>"; };
 		15200FB2FDB11BAA7090D0B0 /* Pods_pubg101.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pubg101.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8608A45F640DA658236F9C /* Pods-pubg101.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pubg101.release.xcconfig"; path = "Target Support Files/Pods-pubg101/Pods-pubg101.release.xcconfig"; sourceTree = "<group>"; };
 		8B506CF08412938BC51F1E9B /* Pods-pubg101.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pubg101.debug.xcconfig"; path = "Target Support Files/Pods-pubg101/Pods-pubg101.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,21 +77,78 @@
 		04473DB1265F725600BE7D8D /* pubg101 */ = {
 			isa = PBXGroup;
 			children = (
-				04473DB2265F725600BE7D8D /* AppDelegate.swift */,
-				04473DB4265F725600BE7D8D /* SceneDelegate.swift */,
-				04473DB6265F725600BE7D8D /* ViewController.swift */,
-				04473DB8265F725600BE7D8D /* Main.storyboard */,
-				04473DBB265F725700BE7D8D /* Assets.xcassets */,
-				04473DBD265F725700BE7D8D /* LaunchScreen.storyboard */,
+				04D726272660C19E00E8CCCF /* Resources */,
+				04D726262660C15B00E8CCCF /* Managers */,
+				04D726232660C12E00E8CCCF /* Storyboards */,
+				04D726212660C10800E8CCCF /* ViewControllers */,
+				04D726282660C1B000E8CCCF /* Models */,
+				04D726252660C14500E8CCCF /* Views */,
+				04D726242660C13D00E8CCCF /* ViewModels */,
 				04473DC0265F725700BE7D8D /* Info.plist */,
-				04473DC8265F746700BE7D8D /* APIResponse.swift */,
-				04473DCC265F778900BE7D8D /* WeaponsTableViewCell.swift */,
-				04473DCF265F805700BE7D8D /* WeaponsTableViewCellViewModel.swift */,
-				04473DD2265F849300BE7D8D /* APICaller.swift */,
-				04B4B4EB265FA77800BE8F3B /* Extensions.swift */,
-				04B4B4EE265FAF5700BE8F3B /* WebViewController.swift */,
 			);
 			path = pubg101;
+			sourceTree = "<group>";
+		};
+		04D726212660C10800E8CCCF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04473DB6265F725600BE7D8D /* Pubg101ViewController.swift */,
+				04B4B4EE265FAF5700BE8F3B /* WebViewController.swift */,
+				04D7261E2660BFC000E8CCCF /* WeaponFullImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04D726232660C12E00E8CCCF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04473DB8265F725600BE7D8D /* Main.storyboard */,
+				04473DBD265F725700BE7D8D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04D726242660C13D00E8CCCF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04473DCF265F805700BE7D8D /* WeaponsTableViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04D726252660C14500E8CCCF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04473DCC265F778900BE7D8D /* WeaponsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04D726262660C15B00E8CCCF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04473DD2265F849300BE7D8D /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		04D726272660C19E00E8CCCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04473DB2265F725600BE7D8D /* AppDelegate.swift */,
+				04473DB4265F725600BE7D8D /* SceneDelegate.swift */,
+				04473DBB265F725700BE7D8D /* Assets.xcassets */,
+				04B4B4EB265FA77800BE8F3B /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04D726282660C1B000E8CCCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04473DC8265F746700BE7D8D /* APIResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		52D8D246F80E4C3E03BBD0C4 /* Frameworks */ = {
@@ -223,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04473DB7265F725600BE7D8D /* ViewController.swift in Sources */,
+				04473DB7265F725600BE7D8D /* Pubg101ViewController.swift in Sources */,
 				04B4B4EF265FAF5700BE8F3B /* WebViewController.swift in Sources */,
 				04473DC9265F746700BE7D8D /* APIResponse.swift in Sources */,
 				04473DD0265F805700BE7D8D /* WeaponsTableViewCellViewModel.swift in Sources */,
@@ -232,6 +291,7 @@
 				04473DB3265F725600BE7D8D /* AppDelegate.swift in Sources */,
 				04473DB5265F725600BE7D8D /* SceneDelegate.swift in Sources */,
 				04473DCD265F778900BE7D8D /* WeaponsTableViewCell.swift in Sources */,
+				04D7261F2660BFC000E8CCCF /* WeaponFullImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

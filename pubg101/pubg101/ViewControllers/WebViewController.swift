@@ -32,6 +32,7 @@ class WebViewController: UIViewController, WKUIDelegate {
         guard let myURL = searchUrl else {
             return
         }
+        
         let myRequest = URLRequest(url: myURL)
         webView.load(myRequest)
     }
