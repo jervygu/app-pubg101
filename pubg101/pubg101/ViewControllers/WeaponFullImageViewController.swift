@@ -10,7 +10,7 @@ import SDWebImage
 
 class WeaponFullImageViewController: UIViewController {
     
-    var weaponImageURL: URL?
+    lazy var weaponImageURL: URL? = URL(string: "")
     
     private let imageContainerView: UIView = {
         let view = UIView()
