@@ -4,8 +4,8 @@ See the informations of the weapons in PUBG.
 
 ## Features
 
-- View weapon image
-- See complete details of a weapon such summary, category, dps, range, attachments and etc., from Gamepedia.
+- View weapon image.
+- See complete details of a weapon such summary, category, dps, range, attachments and etc., from Gamepedia site.
 
 
 ## Dependencies
